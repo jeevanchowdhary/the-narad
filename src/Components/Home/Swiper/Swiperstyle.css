@@ -1,0 +1,38 @@
+.home-img1,
+.home-img2,
+.home-img3,
+.home-img4 {
+    height: 75vh;
+}
+
+.custom-carousel {
+    position: absolute;
+    top: 14%;
+    left: 25%;
+    width: 70%;
+    height: 75vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 6px 6px rgba(0, 0, 0, 0.459);
+}
+.controls {
+    /* border: 1px solid white; */
+    position: absolute;
+    top: 92%;
+    left: 85%;
+    gap: 8%;
+    width: 10%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bi-arrow-left,
+.bi-arrow-right {
+    color: rgb(253, 253, 253); /* Change the color as needed */
+    width: 70%;
+    font-size: 38px;
+    cursor: pointer;
+}
+.bi-arrow-left:hover,
+.bi-arrow-right:hover {
+    color: rgb(154, 154, 154);
+}

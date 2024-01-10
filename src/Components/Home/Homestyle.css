@@ -1,0 +1,91 @@
+.home-Imgslider {
+    width: 100%;
+    height: 91.5vh;
+}
+.homeText {
+    position: absolute;
+    top: 32%;
+    left: 5%;
+    height: 40vh;
+    width: 55%;
+}
+
+.homelogoName {
+    text-shadow: 0 14.36px 4.896px #000000;
+    letter-spacing: 4px;
+    color: rgb(191, 0, 255);
+    font-family: "Arvo";
+    font-size: 100px;
+    padding: 2%;
+}
+.hometextLine {
+    width: 75%;
+}
+.hometextLine > p {
+    text-shadow: 0px 4px 3px rgb(0, 0, 0), 0px 8px 13px rgba(0, 0, 0, 0.538),
+        0px 18px 23px rgba(0, 0, 0, 0.353);
+    color: white;
+    font-size: 25px;
+    font-family: "Arvo";
+    padding-left: 2%;
+    padding-top: 10%;
+    width: 90%;
+}
+.hometextwriter > p {
+    color: rgb(174, 0, 255);
+    /* font-weight: 300; */
+    position: absolute;
+    width: 40%;
+    bottom: -38%;
+    /* left: -2%; */
+    font-family: "Arvo";
+    /* text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1); */
+}
+.homeBtm {
+    width: 100%;
+    height: 38vh;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+/* .HomeTopLine {
+    width: 70%;
+    height: 4vh;
+    color: white;
+    background-color: rgb(93, 93, 255);
+} */
+
+.btmImg {
+    border: 1px solid;
+    width: 18%;
+    height: 30vh;
+    margin-right: -25%;
+}
+.btmRtgtext {
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-evenly;
+    height: 30vh;
+    width: 60%;
+    color: #8c8c8c;
+    padding-left: 13%;
+}
+.title {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+}
+.Home-Books {
+    margin-top: 3%;
+    /* background-image: linear-gradient(#150628, rgb(0, 173, 66)); */
+    background-color: #150628;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: -10%;
+}

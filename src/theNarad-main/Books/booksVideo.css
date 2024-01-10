@@ -1,0 +1,8 @@
+video::-webkit-media-controls-play-button {
+  display: none;
+}
+
+/* Hide the volume controls */
+video::-webkit-media-controls-volume-slider {
+  display: none;
+}

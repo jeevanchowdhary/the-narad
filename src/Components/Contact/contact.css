@@ -1,0 +1,22 @@
+.contact-main {
+    width: 100%;
+    height: 91.5vh;
+}
+.contact-lft-cont{
+     width: 100%;
+    height: 91.5vh;
+}
+.contact-image{
+    width: 100%;
+    height: 91.5vh;
+}
+.contact-rtg-cont{
+    position: absolute;
+    top: 8.1%;
+    width: 100%;
+    height: 91.8vh;
+    background-color: rgba(0, 0, 0, 0.253);
+    padding-left: 50%;
+    padding-top: 3%;
+}
+

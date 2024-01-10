@@ -1,0 +1,168 @@
+.profiles {
+    width: 100%;
+    height: 33vh;
+    background: rgb(183, 190, 255);
+    border-radius: 29px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #604b4a30 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.profiles .mail {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+}
+
+.profiles .profile-pic {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.profiles .profile-pic img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px 30px;
+    transition: all 0.5s ease-in-out 0s;
+}
+.profiles .bottom {
+    position: absolute;
+    width: 98%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    background: #be7cf4;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(123, 0, 255, 0.188) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.profiles .bottom .content {
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+}
+
+.profiles .bottom .content .name {
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    left: 36%;
+    top: -23%;
+}
+
+.profiles .bottom .content .about-me {
+    display: block;
+    position: absolute;
+    left: 15%;
+    top: 13%;
+    width: 80%;
+    height: 10vh;
+    font-size: 16px;
+    color: white;
+}
+
+.profiles .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-icon {
+    width: 20%;
+    height: 5vh;
+    margin-bottom: 2%;
+    border-radius: 50px;
+    background: #bf70ff;
+    border: 1px solid #d199ff;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px#9170a9, -6px -6px 12px#dbafff;
+}
+.social-icon:hover {
+    color: #9500ff;
+}
+
+.social-icon:active {
+    color: #8666a1;
+    box-shadow: inset 4px 4px 12px#d6a3ff, inset -4px -4px 12px #dfb8fe;
+}
+.profiles:hover {
+    border-top-left-radius: 20px;
+}
+
+.profiles:hover .bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.profiles:hover .profile-pic {
+    width: 31%;
+    height: 12vh;
+    aspect-ratio: 1;
+    top: 1%;
+    left: 1%;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #97a2ff;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.profiles:hover .profile-pic:hover {
+    transform: scale(1.2);
+    border-radius: 0px;
+}
+
+.profiles:hover .profile-pic img {
+    transform: scale(1.5);
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+@media (max-height: 550px) {
+    .profiles .bottom .content .name {
+        font-size: 15px;
+        left: 38%;
+        top: -12%;
+    }
+    .profiles .bottom .content .about-me {
+        left: 20%;
+        top: 13%;
+        width: 80%;
+        height: 10vh;
+        font-size: 11px;
+    }
+    .profiles:hover .profile-pic {
+        border: 5px solid #97a2ff;
+        height: 13vh;
+        width: 36%;
+    }
+    .profiles .bottom {
+        width: 93%;
+        bottom: 1%;
+        left: 3.5%;
+    }
+}

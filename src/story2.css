@@ -1,0 +1,18 @@
+.page2-content {
+    border: 1px solid;
+    width: 80%;
+    height: 50vh;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.story2-pg1{
+    position: relative;
+    /* top: 25%; */
+    padding: 10%;
+}
+.story2-pg4{
+    position: relative;
+    top:10%;
+    padding: 10%;
+}
