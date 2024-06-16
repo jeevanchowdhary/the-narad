@@ -14,8 +14,8 @@
     /* background-color: rgb(226, 183, 255); */
     flex: 0 0 auto; /* Prevent flex items from growing */
     scroll-snap-align: start;
-    width: 25% !important; /* Set the width of each card to 15% */
-    height: 26vh !important; /* Set the height of each card to 20vh */
+    width: 33% !important; /* Set the width of each card to 15% */
+    height: 36vh !important; /* Set the height of each card to 20vh */
     margin: 1%;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);

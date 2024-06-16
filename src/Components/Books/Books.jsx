@@ -37,42 +37,10 @@ function Books() {
 
     return (
         <div className="booksMain">
-            <div className="bookstop">
-                <div className="booktop-headline">
-                    <h1>
-                        The first page sells this book. The last page sells your
-                        next book.
-                    </h1>
-                </div>
-                <div className="main">
-                    <div className="cards" id="c1">
-                        <img src="story1.jpg" alt="" />
-                    </div>
-                    <div className="cards" id="c2">
-                        <img src="story2.jpg" alt="" />
-                    </div>
-                    <div className="cards" id="c3">
-                        <img src="story3.jpg" alt="" />
-                    </div>
-                    <div className="cards" id="c4">
-                        <img src="story4.jpg" alt="" />
-                    </div>
-                    <div className="cards" id="c5">
-                        <img src="story5.jpg" alt="" />
-                    </div>
-                    <div className="cards" id="c6">
-                        <img src="story6.jpg" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div className="booktoprtg"></div>
-            <div className="booksbtm">
+                       <div className="booksbtm">
                 <div className="booksbtmtext">
                     <div className="rtg-text">
                         <h1>Best Books Available Here</h1>
-                    </div>
-                    <div className="seemore-btn">
-                        <button onClick={signout}>Sign Out</button>
                     </div>
                 </div>
                 <div className="btm-scrol">

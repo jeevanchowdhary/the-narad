@@ -18,7 +18,7 @@ function HomeBooks({ books }) {
                         <div className="homeCardBtn">
                             <button className="homeBooksBtn">
                                 <span>
-                                    <Link to="/loginpage">Continue</Link>
+                                    <Link to="/loginpage" style={{ color: 'black' }}>Continue</Link>
                                 </span>
 
                                 <svg

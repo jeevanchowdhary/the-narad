@@ -87,7 +87,7 @@ function Loginpage() {
                                 handleSubmit(e, login ? "signin" : "signup");
                             }}
                         >
-                            <h1>Create Account</h1>
+                            <h1 style={{ color: 'black' }}>Create Account</h1>
                             <span> use your email for registration</span>
                             <input type="text" placeholder="Name" name="name" />
                             <input
@@ -112,7 +112,7 @@ function Loginpage() {
                                 handleSubmit(e);
                             }}
                         >
-                            <h1>Sign In</h1>
+                            <h1 style={{ color: 'black' }}>Sign In</h1>
                             <span> use your email password</span>
                             <input
                                 type="email"
@@ -137,8 +137,8 @@ function Loginpage() {
                                     !isActive ? "active" : ""
                                 }`}
                             >
-                                <h1>Welcome Back!</h1>
-                                <p>
+                                <h1 style={{ color: 'black' }}>Welcome Back!</h1>
+                                <p style={{ color: 'black' }}>
                                     Enter your personal details to use all site
                                     features
                                 </p>
@@ -155,7 +155,9 @@ function Loginpage() {
                                     isActive ? "active" : ""
                                 }`}
                             >
-                                <h1>Welcome, Friend!</h1>
+                                <div>
+                                    <img style={{ width: "100%", height: "15vh" }} src="Logo.png" alt="" />
+                                </div>
                                 <p>
                                     Enter your personal details to use all site
                                     features

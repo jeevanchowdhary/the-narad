@@ -7,6 +7,8 @@ import PageNavigation from "./Components/Books/PageNavigation";
 import BooksScroll from "./Components/Books/BooksScroll";
 import "./manual&auto_read/Rstyles.css";
 import "./story2.css";
+import { Link } from "react-router-dom";
+import Background from "./Components/Background/Background";
 
 const FlipBook = () => {
     const [maleVideoSrc, setMaleVideoSrc] = useState("male.mp4");
@@ -226,22 +228,27 @@ const FlipBook = () => {
     };
 
     return (
+        <div >
         <div className="flip-book-container">
-            <PageNavigation
+            {/* <PageNavigation
                 chapters={chapters}
                 currentChapter={currentChapter}
                 setCurrentChapter={setCurrentChapter}
-            />
+            /> */}
+
+                    
+
+                    
 
             <div
                 style={{
                     display: "flex",
                     height: "70vh",
                     position: "relative",
-                    width: "45%",
+                    width: "65%",
                 }}
             >
-                <FlipPage
+                <FlipPage 
                     orientation="horizontal"
                     responsive={true}
                     flipOnTouch={true}
@@ -258,7 +265,9 @@ const FlipBook = () => {
                 >
                     {chapters[currentChapter].pages.map(
                         (content, pageIndex) => (
-                            <article key={pageIndex} className="page">
+                            <article key={pageIndex} className="page" style={{
+                                background:"white",
+                            }}>
                                 <h2>{chapters[currentChapter].name}</h2>
                                 <div
                                     dangerouslySetInnerHTML={{
@@ -313,6 +322,7 @@ const FlipBook = () => {
             <div className="Right-container">
                 <div className="videoContainer">
                     {displayMaleVoices && !displayFemaleVoices && (
+                        <div>
                         <video
                             ref={(ref) => setVideoRef(ref)}
                             width="100%"
@@ -322,8 +332,25 @@ const FlipBook = () => {
                         >
                             <source src={maleVideoSrc} type="video/mp4" />
                         </video>
+                        <button
+                        onClick={() => window.open(maleVideoSrc, '_blank')}
+                        style={{
+                            display: 'block',
+                            backgroundColor:'#007bff',
+                            padding:'5px',
+                            fontSize: '12px',
+                            cursor: 'pointer',
+                            border:'none',
+                            borderRadius: '5px'
+                        }}
+                        >
+                            View in New Tab
+                        </button>
+                        </div>
                     )}
+                    
                     {displayFemaleVoices && !displayMaleVoices && (
+                        <div>
                         <video
                             ref={(ref) => setVideoRef(ref)}
                             width="100%"
@@ -333,7 +360,23 @@ const FlipBook = () => {
                         >
                             <source src={femaleVideoSrc} type="video/mp4" />
                         </video>
+                        <button
+                        onClick={() => window.open(femaleVideoSrc, '_blank')}
+                        style={{
+                            display: 'block',
+                            backgroundColor:'#007bff',
+                            fontSize: '12px',
+                            padding:'5px',
+                            cursor: 'pointer',
+                            border:'none',
+                            borderRadius: '5px'
+                        }}
+                        >
+                            View in New Tab
+                        </button>
+                        </div>
                     )}
+                    
                     {!displayMaleVoices && !displayFemaleVoices && (
                         // Render a placeholder or default content when no video is displayed
                         <div>No video selected</div>
@@ -379,6 +422,7 @@ const FlipBook = () => {
                         <button
                             onClick={() => {
                                 setDisplayMaleVoices(true);
+                                setDisplayFemaleVoices(false);
                                 enableDropdown();
                             }}
                         >
@@ -455,6 +499,7 @@ const FlipBook = () => {
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

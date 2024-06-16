@@ -3,6 +3,7 @@ import Home from "./Components/Home/Home";
 import Books from "./Components/Books/Books";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
+import Create from "./Components/Create/Create";
 import Loginpage from "./Components/LoginPage/Loginpage";
 import PagenotFound from "./Components/Pagenotfound/PagenotFound";
 import Navbar from "./Components/Navbar/Navbar";
@@ -21,6 +22,7 @@ export default function App() {
                 <Route path="/books" element={<Books />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/create" element={<Create/>} />
                 <Route path="/loginpage" element={<Background />} />
                 <Route path="*" element={<PagenotFound />} />
             </Routes>
