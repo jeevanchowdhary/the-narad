@@ -36,10 +36,8 @@ const FlipBook = () => {
         setIsPlaying(!isPlaying);
         if (isPlaying) {
             speechSynthesis.resume();
-            console.log("audio paly");
         } else {
             speechSynthesis.pause();
-            console.log("audio pause");
         }
     };
     const handlePause = () => {
@@ -83,6 +81,13 @@ const FlipBook = () => {
         const voiceList = speechSynthesis.getVoices();
         setVoices(voiceList);
     };
+
+    const handleOpenInNewTab = () => {
+        if(displayFemaleVoices && !displayMaleVoices)
+            window.open(femaleVideoSrc, '_blank');
+        else
+            window.open(maleVideoSrc, '_blank');
+      };
 
     const speakText = useCallback(
         (text, selectedVoices) => {
@@ -322,59 +327,49 @@ const FlipBook = () => {
             <div className="Right-container">
                 <div className="videoContainer">
                     {displayMaleVoices && !displayFemaleVoices && (
-                        <div>
-                        <video
-                            ref={(ref) => setVideoRef(ref)}
-                            width="100%"
-                            height="160vh"
-                            controls
-                            loop
-                        >
-                            <source src={maleVideoSrc} type="video/mp4" />
-                        </video>
-                        <button
-                        onClick={() => window.open(maleVideoSrc, '_blank')}
-                        style={{
-                            display: 'block',
-                            backgroundColor:'#007bff',
-                            padding:'5px',
-                            fontSize: '12px',
-                            cursor: 'pointer',
-                            border:'none',
-                            borderRadius: '5px'
-                        }}
-                        >
-                            View in New Tab
-                        </button>
-                        </div>
+                       <div style={{ position: 'relative' }}>
+                       <video
+                         ref={(ref) => setVideoRef(ref)}
+                         width="100%"
+                         height="160vh"
+                         controls
+                         loop
+                       >
+                         <source src={maleVideoSrc} type="video/mp4" />
+                       </video>
+                       <button
+                         onClick={handleOpenInNewTab}
+                         className="view-in-new-tab-button"
+                       ><link
+                       rel="stylesheet"
+                       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                     />
+                         <i className="fas fa-external-link-alt"></i>
+                       </button>
+                     </div>
                     )}
                     
                     {displayFemaleVoices && !displayMaleVoices && (
-                        <div>
-                        <video
-                            ref={(ref) => setVideoRef(ref)}
-                            width="100%"
-                            height="160vh"
-                            controls
-                            loop
-                        >
-                            <source src={femaleVideoSrc} type="video/mp4" />
-                        </video>
-                        <button
-                        onClick={() => window.open(femaleVideoSrc, '_blank')}
-                        style={{
-                            display: 'block',
-                            backgroundColor:'#007bff',
-                            fontSize: '12px',
-                            padding:'5px',
-                            cursor: 'pointer',
-                            border:'none',
-                            borderRadius: '5px'
-                        }}
-                        >
-                            View in New Tab
-                        </button>
-                        </div>
+                         <div style={{ position: 'relative' }}>
+                         <video
+                           ref={(ref) => setVideoRef(ref)}
+                           width="100%"
+                           height="160vh"
+                           controls
+                           loop
+                         >
+                           <source src={femaleVideoSrc} type="video/mp4" />
+                         </video>
+                         <button
+                           onClick={handleOpenInNewTab}
+                           className="view-in-new-tab-button"
+                         ><link
+                         rel="stylesheet"
+                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                       />
+                           <i className="fas fa-external-link-alt"></i>
+                         </button>
+                       </div>
                     )}
                     
                     {!displayMaleVoices && !displayFemaleVoices && (

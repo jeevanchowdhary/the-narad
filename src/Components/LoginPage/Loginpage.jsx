@@ -126,7 +126,6 @@ function Loginpage() {
                                 placeholder="Password"
                                 name="password"
                             />
-                            <a href="#">Forget Your Password?</a>
                             <button>Sign In</button>
                         </form>
                     </div>

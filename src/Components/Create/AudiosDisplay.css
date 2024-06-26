@@ -23,7 +23,7 @@
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 8px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -37,7 +37,7 @@
     background-color: lightskyblue;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 8px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -47,4 +47,63 @@
     border-radius: 10px;/* Adjust margin as needed */
   }
   
+  .scrollable-container {
+    max-height: 200px; /* Set the height of the container */
+    width: 430px;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    overflow-x: hidden;
+  }
   
+  .scrollable-container::-webkit-scrollbar {
+    width: 12px;  /* Width of the scrollbar */
+  }
+  
+  .scrollable-container::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Background of the track */
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb {
+    background: #888;  /* Color of the scrollbar thumb */
+    border-radius: 6px;  /* Rounded corners for the thumb */
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Color of the thumb when hovered */
+  }
+  
+  /* Firefox scrollbar styling */
+  .scrollable-container {
+    scrollbar-width: thin;  /* Make scrollbar thinner */
+    scrollbar-color: #888 #f1f1f1;  /* Color of the thumb and track */
+  }
+    
+  .audio-item {
+    display: flex;
+    align-items: center; /* Vertically center items */
+  }
+  
+  .playButton, .deleteButton {
+    background: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 10px;
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  .playButton:hover, .deleteButton:hover {
+    color: #007bff; /* Change the color on hover */
+  }
+  
+  .deleteButton:hover, .deleteButton:hover {
+    color: #007bff; /* Change the color on hover */
+  }
+
+  .playButton i {
+    font-size: 24px; /* Adjust icon size */
+    color: green;
+  }
+  
+  .deleteButton i {
+    font-size: 24px; /* Adjust icon size */
+    color: red;
+  }

@@ -1,0 +1,16 @@
+
+.slanted-text-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slanted-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 30%; /* Center horizontally */
+  color: white; /* Text color */
+  font-size: 3em; /* Adjust font size as needed */
+  font-family: Arial, sans-serif; /* Fallback font */
+  text-align: center; /* Center text */
+  line-height: 1.2; /* Adjust line height for better readability */
+}

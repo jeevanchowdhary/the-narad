@@ -116,4 +116,27 @@
 .col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
 .col-12 { flex: 0 0 100%; max-width: 100%; }
 
-    
+hr {
+  border: none;           /* Remove default border */
+  height: 2px;            /* Set the height */
+  background-color: white; /* Set the color */
+  margin: 20px 0;         /* Add some space around the line */
+} 
+
+
+.slanted-text-container {
+  position: relative;
+  height: 50vh; /* Full height of the viewport */
+  overflow: hidden;
+}
+
+.slanted-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 30%; /* Center horizontally */
+  color: white; /* Text color */
+  font-size: 3em; /* Adjust font size as needed */
+  font-family: Arial, sans-serif; /* Fallback font */
+  text-align: center; /* Center text */
+  line-height: 1.2; /* Adjust line height for better readability */
+}

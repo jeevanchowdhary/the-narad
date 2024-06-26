@@ -9,7 +9,7 @@ import BottomSection from "../BottomSection/BottomSection";
 import { signOut } from "firebase/auth";
 import { database } from "../LoginPage/firebase";
 import { useNavigate } from "react-router-dom";
-import AudioUpload from './audioupload';
+import AvatarUpload from './avatarupload';
 
 
 
@@ -17,7 +17,7 @@ function Create() {
     const [userId, setUserId] = useState(null);
     const handleSaveRecording = (event) => {
         if (!userId) {
-          console.error('User ID is not available');
+          alert("Please sign up to access this page");
           return;
         }
       
@@ -39,7 +39,7 @@ function Create() {
       
         uploadBytes(audioRef, renamedFile)
           .then((snapshot) => {
-            alert(`${newFileName} uploaded successfully`);
+            alert(`audio_${timestamp}.mp3 uploaded successfully`);
           })
           .catch((error) => {
             console.error(`Error uploading ${newFileName}`, error);
@@ -83,9 +83,9 @@ function Create() {
         const unsubscribe = onAuthStateChanged(database, (user) => {
             if (!user) {
                 // User is not authenticated
-                alert("Please sign up to access this page");
-                // Redirect to the login page or another appropriate page
-                history("/loginpage");
+                // alert("Please sign up to access this page");
+                // // Redirect to the login page or another appropriate page
+                // history("/loginpage");
             }else {
                 setUserId(user.uid);
               }
@@ -100,28 +100,36 @@ function Create() {
     return (
         <div className="booksMain">
                        <div className="booksbtm">
-                <div className="booksbtmtext">
-                    <div className="rtg-text">
-                        <h1>Create Voices & Avtars</h1>
+                    <div className="row">
+                      <div className="col-6" style={{justifyContent: "center", display: "flex"}}><h1>Voices</h1></div>
+                      <div className="col-6" style={{justifyContent: "center", display: "flex"}}><h1>Avatar</h1></div>
                     </div>
-                </div>
                 <div className="row">
-                <div className="col-4"></div>
-                    <div className="col-2">
+                <div className="col-6" style={{borderRight:"2px red solid", justifyContent: "center", display: "flex"}}>
+
                         <input type="file" accept="audio/mp3" id="file-input" onChange={handleSaveRecording} style={{ display: 'none' }} />
                         <label htmlFor="file-input" className="file-input-label">
                             Upload Audio
                         </label>
                     </div>
-                    <div className="col-6">
-                    <AudioUpload />
+                    <div className="col-1"></div>
+                    <div className="col-5" > 
+                    {/* <AvatarUpload /> */}
                     </div>
+                    <div className="col-4" ></div>
                 </div>
-                
+                <div className="row">
+                <div className="col-6" style={{borderRight:"2px red solid"}}>
+                  <VoiceRecorder/>
 
-                <VoiceRecorder/>
-
-                <AudiosDisplay />
+                  <AudiosDisplay />
+                </div>
+                <div className="col-6">
+                  <div class="slanted-text-container">
+                        <h1 class="slanted-text">Coming Soon!!</h1>
+                  </div>
+                </div>
+                </div>
             </div>
             <div>
                 <BottomSection />

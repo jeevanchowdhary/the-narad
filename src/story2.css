@@ -16,3 +16,21 @@
     top:10%;
     padding: 10%;
 }
+
+.view-in-new-tab-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed to position the button */
+    right: 10px; /* Adjust as needed to position the button */
+    background-color: #007bff;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .view-in-new-tab-button i {
+    margin-right: 5px; /* Spacing between icon and text */
+  }
+  

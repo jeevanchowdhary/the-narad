@@ -64,8 +64,9 @@ const VoiceRecorder = () => {
 
   const handleSaveRecording = () => {
     if (!userId) {
-      console.error('User ID is not available');
-      return;
+      alert("Please sign up to access this page");
+                // Redirect to the login page or another appropriate page
+                return;
     }
 
     if (recordedChunks.length === 0) {
@@ -76,7 +77,7 @@ const VoiceRecorder = () => {
     recordedChunks.forEach((chunk, index) => {
       const audioRef = ref(storage, `audio_${userId}_${Date.now()}.mp3`);
       uploadBytes(audioRef, chunk).then((snapshot) => {
-        alert(`audio_${userId}_${Date.now()}.mp3 uploaded successfully`);
+        alert(`audio_${Date.now()}.mp3 uploaded successfully`);
       }).catch((error) => {
         console.error(`Error uploading audio_${userId}_${Date.now()}.mp3`, error);
       });
@@ -87,8 +88,8 @@ const VoiceRecorder = () => {
     const unsubscribe = onAuthStateChanged(database, (user) => {
       if (!user) {
         // User is not authenticated
-        alert("Please sign up to access this page");
-        navigate("/loginpage");
+        // alert("Please sign up to access this page");
+        // navigate("/loginpage");
       } else {
         setUserId(user.uid);
       }
@@ -101,14 +102,23 @@ const VoiceRecorder = () => {
     <div className="centered-container">
       <h1>Voice Recorder</h1>
       <div className="button-container">
+      <div className="row">
         {isRecording ? (
-          <button onClick={handleStopRecording}>Stop Recording</button>
+                <div className="col-4">
+                  <button onClick={handleStopRecording}>Stop Recording</button>
+                  </div>
         ) : (
+                <div className="col-4">
           <button onClick={handleStartRecording}>Start Recording</button>
+          </div>
         )}
+               <div className="col-2"></div>
+       <div className="col-4">
         <button onClick={handleSaveRecording} disabled={audioUrls.length === 0}>
           Save Recordings
         </button>
+        </div>
+        </div>
       </div>
       {audioUrls.map((url, index) => (
         <div key={index}>
